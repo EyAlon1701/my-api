@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/EyAlon1701/my-api/issues"
   },
-  "homepage": "https://github.com/EyAlon1701/my-api#readme"
+  "homepage": "https://github.com/EyAlon1701/my-api#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "nodemon": "^2.0.15"
+  }
 }
