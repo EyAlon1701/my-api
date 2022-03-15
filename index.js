@@ -11,5 +11,5 @@ app.use('/api/accounts', accountsRoute);
 
 const port=5090;
 app.listen(port, function(){
-    console.log(`Server is tuning via prot ${port}`);
+    console.log(`Server is tuning via port ${port}`);
 });

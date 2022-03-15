@@ -38,7 +38,7 @@ router.post('/sayHello', (request,response) =>{
 
 router.post('/Login', (request,response) =>{
 
-    const {username,password,email} = request.body;
+    const {password,email} = request.body;
     arr.forEach(user=>{
         if(user.password==password && user.email==email)
         {
@@ -53,5 +53,29 @@ router.post('/Login', (request,response) =>{
     });
 });
 
+
+router.post('/addUser', (request,response) =>{
+
+    const {username,password,email} = request.body;
+    if(username==null || password==null || email==null)
+    {
+        return response.status(200).json({
+            msg: `data missing`
+        });
+    }
+    arr.forEach(user=>{
+        if(user.email==email)
+        {
+            return response.status(200).json({
+                msg: `${user.email} already exist`
+            });
+        }
+    })
+    arr.push({username,password,email});
+
+    return response.status(200).json({
+        msg: arr
+    });
+});
 
 module.exports = router;
